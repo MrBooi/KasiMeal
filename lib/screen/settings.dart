@@ -11,20 +11,19 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  bool _glutenFree = false;
-  bool _vegetarian = false;
-  bool _vegan = false;
-  bool _lactoseFree = false;
+  bool _glutenFree;
+  bool _vegetarian;
+  bool _vegan;
+  bool _lactoseFree;
 
 
     @override
     void initState() { 
-      _glutenFree = widget.currentFilters['glutun'];
+      _glutenFree = widget.currentFilters['gluten'];
       _lactoseFree = widget.currentFilters['lactose'];
       _vegan = widget.currentFilters['vegan'];
-      _vegetarian = widget.currentFilters['vegetarian'];
-      super.initState();
-      
+      _vegetarian = widget.currentFilters['vegitarian'];
+      super.initState(); 
     }
 
   Widget _buildSwitchListTile(String text, bool value, Function updateValue) {
